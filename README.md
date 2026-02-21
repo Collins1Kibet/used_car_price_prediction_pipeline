@@ -1,11 +1,11 @@
-Automobile Price Prediction System
+## Automobile Price Prediction System
 End-to-End Machine Learning Pipeline with Flask Deployment
 
 This project demonstrates the complete lifecycle of a production-ready Machine Learning system — from raw data ingestion and statistical analysis to model optimization and web deployment.
 
 The application predicts automobile prices using advanced regression techniques and a fully engineered preprocessing pipeline.
 
-***Business Objective***
+### Business Objective
 
 Accurately estimate car prices based on technical specifications and categorical attributes to support:
 
@@ -15,28 +15,28 @@ Accurately estimate car prices based on technical specifications and categorical
 
 - Valuation automation systems
 
-****Dataset****
+### Dataset
 
-Source: UCI Machine Learning Repository
+- Source: UCI Machine Learning Repository
 
-Dataset: Automobile Imports (1985)
+- Dataset: Automobile Imports (1985)
 
-Target Variable: price
+- Target Variable: price
 
 The dataset contains both numeric and categorical features, making it ideal for demonstrating real-world ML preprocessing challenges.
 
 - Technical Highlights
-✔ Advanced Data Cleaning
+- Advanced Data Cleaning
 
-Missing value handling (custom replacement + imputation)
+### Missing value handling (custom replacement + imputation)
 
-Type conversion and coercion
+- Type conversion and coercion
 
-Duplicate detection
+- Duplicate detection
 
-Target-based filtering
+- Target-based filtering
 
-✔ Statistical Feature Analysis
+### Statistical Feature Analysis
 
 - Pearson Correlation (linear relationships)
 
@@ -48,8 +48,8 @@ Target-based filtering
 
 This demonstrates strong statistical reasoning beyond basic EDA.
 
-*****Machine Learning Architecture*****
-****Preprocessing Strategy (Production-Level)****
+##Machine Learning Architecture
+#### Preprocessing Strategy (Production-Level)
 
 Implemented using ColumnTransformer + Pipeline:
 
@@ -63,11 +63,11 @@ Implemented using ColumnTransformer + Pipeline:
 
 - Automated imputation within pipeline
 
-✔ Fully reproducible
+ Fully reproducible
 ✔ Prevents data leakage
 ✔ Cross-validation safe
 
-****Models Implemented****
+### Models Implemented
 
 - Linear Regression
 
@@ -81,19 +81,19 @@ Implemented using ColumnTransformer + Pipeline:
 
 - Polynomial Lasso
 
-****Model Selection & Optimization****
+### Model Selection & Optimization
 
-10-Fold Cross Validation
+- 10-Fold Cross Validation
 
-RMSE evaluation
+- RMSE evaluation
 
-GridSearchCV for hyperparameter tuning
+- GridSearchCV for hyperparameter tuning
 
-Regularization comparison to reduce overfitting
+- Regularization comparison to reduce overfitting
 
-Final model serialized using joblib.
+- Final model serialized using joblib.
 
-****Evaluation Metric****
+### Evaluation Metric
 
 Primary Metric: Root Mean Squared Error (RMSE)
 
@@ -108,17 +108,17 @@ Deployment
 
 The best-performing model is deployed using Flask.
 
-****Project Structure****
-├── app.py                # Flask application
-├── price_model.pkl       # Serialized trained model
-├── requirements.txt
-├── README.md
-├── templates/
-│   └── index.html        # Web form interface
+### Project Structure
+- ├── app.py                # Flask application
+- ├── price_model.pkl       # Serialized trained model
+- ├── requirements.txt
+- ├── README.md
+- ├── templates/
+- │   └── index.html        # Web form interface
 
 Users input automobile features via a web form, and the trained ML model returns predicted price in real-time.
 
-****Tech Stack****
+### Tech Stack
 
 - Python
 
