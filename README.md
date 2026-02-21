@@ -1,7 +1,7 @@
 ## Automobile Price Prediction System
 End-to-End Machine Learning Pipeline with Flask Deployment
 
-This project demonstrates the complete lifecycle of a production-ready Machine Learning system — from raw data ingestion and statistical analysis to model optimization and web deployment.
+This project demonstrates the complete lifecycle of a production-ready Machine Learning system from raw data ingestion and statistical analysis to model optimization and web deployment.
 
 The application predicts automobile prices using advanced regression techniques and a fully engineered preprocessing pipeline.
 
