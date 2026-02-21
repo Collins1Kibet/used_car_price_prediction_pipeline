@@ -1,104 +1,73 @@
-**Automobile Price Prediction System**
+Automobile Price Prediction System
+End-to-End Machine Learning Pipeline with Flask Deployment
 
-A Machine Learning web application that predicts car prices using multiple regression models.
+This project demonstrates the complete lifecycle of a production-ready Machine Learning system — from raw data ingestion and statistical analysis to model optimization and web deployment.
 
-The model is trained on the UCI Automobile Dataset and deployed using Flask as a web interface.
+The application predicts automobile prices using advanced regression techniques and a fully engineered preprocessing pipeline.
 
-***Project Overview***
+***Business Objective***
 
-This project:
+Accurately estimate car prices based on technical specifications and categorical attributes to support:
 
-- Loads and cleans the UCI Automobile dataset
+- Pricing strategy decisions
 
-- Performs Exploratory Data Analysis (EDA)
+- Automotive market analysis
 
-- Applies statistical tests (Pearson, Spearman, Kruskal, Chi-Square)
+- Valuation automation systems
 
-- Builds preprocessing pipelines using ColumnTransformer
-
-- Trains multiple regression models:
-
-- Linear Regression
-
-- Polynomial Regression
-
-- Ridge Regression
-
-- Lasso Regression
-
-- Polynomial + Ridge
-
-- Polynomial + Lasso
-
-- Uses Cross-Validation & GridSearchCV for model tuning
-
-- Selects the best-performing model
-
-- Saves the final model using joblib
-
-- Deploys the trained model using Flask
-
-***Dataset***
+📊 Dataset
 
 Source: UCI Machine Learning Repository
-Dataset: Automobile Imports 1985 Dataset
 
-The dataset contains car features such as:
+Dataset: Automobile Imports (1985)
 
-- Engine size
+Target Variable: price
 
-- Horsepower
+The dataset contains both numeric and categorical features, making it ideal for demonstrating real-world ML preprocessing challenges.
 
-- Wheel base
+- Technical Highlights
+✔ Advanced Data Cleaning
 
-- Fuel type
+Missing value handling (custom replacement + imputation)
 
-- Body style
+Type conversion and coercion
 
-- Curb weight
+Duplicate detection
 
-- City MPG / Highway MPG
+Target-based filtering
 
-- And more...
+✔ Statistical Feature Analysis
 
-Target variable: price
+- Pearson Correlation (linear relationships)
 
-***Machine Learning Pipeline***
-1. Data Cleaning
+- Spearman Correlation (non-linear & robust to outliers)
 
-- Replaced missing values (?) with NaN
+- Kruskal-Wallis Test (categorical vs numeric impact)
 
-- Converted numeric columns
+- Chi-Square Test (categorical dependency analysis)
 
-- Dropped rows with missing target values
+This demonstrates strong statistical reasoning beyond basic EDA.
 
-2. Statistical Analysis
+*****Machine Learning Architecture*****
+****Preprocessing Strategy (Production-Level)****
 
-- Pearson Correlation
+Implemented using ColumnTransformer + Pipeline:
 
-- Spearman Correlation
+- RobustScaler → Outlier-sensitive features
 
-- Kruskal-Wallis Test (categorical vs numeric)
+- MinMaxScaler → Bounded variables
 
-- Chi-square test (categorical vs categorical)
+- StandardScaler → Normally distributed features
 
-3. Feature Engineering & Preprocessing
+- OneHotEncoder → Categorical variables
 
-- Different scalers were applied strategically:
+- Automated imputation within pipeline
 
-- RobustScaler → for outlier-sensitive features
+✔ Fully reproducible
+✔ Prevents data leakage
+✔ Cross-validation safe
 
-- MinMaxScaler → bounded features
-
-- StandardScaler → normally distributed features
-
-- OneHotEncoder → categorical variables
-
-Implemented using:
-- ColumnTransformer
-- Pipeline
-
-***Models Implemented***
+****Models Implemented****
 
 - Linear Regression
 
@@ -112,10 +81,57 @@ Implemented using:
 
 - Polynomial Lasso
 
-Model selection performed using:
+****Model Selection & Optimization****
 
-- 10-Fold Cross Validation
+10-Fold Cross Validation
 
-- RMSE evaluation
+RMSE evaluation
 
-- GridSearchCV for hyperparameter tuning
+GridSearchCV for hyperparameter tuning
+
+Regularization comparison to reduce overfitting
+
+Final model serialized using joblib.
+
+****Evaluation Metric****
+
+Primary Metric: Root Mean Squared Error (RMSE)
+
+Used both for:
+
+Cross-validation performance
+
+Test set evaluation
+
+This ensures reliable generalization performance.
+Deployment
+
+The best-performing model is deployed using Flask.
+
+****Project Structure****
+├── app.py                # Flask application
+├── price_model.pkl       # Serialized trained model
+├── requirements.txt
+├── README.md
+├── templates/
+│   └── index.html        # Web form interface
+
+Users input automobile features via a web form, and the trained ML model returns predicted price in real-time.
+
+****Tech Stack****
+
+- Python
+
+- NumPy
+
+- Pandas
+
+- Scikit-learn
+
+- SciPy
+
+- Matplotlib & Seaborn
+
+- Flask
+
+- Joblib
