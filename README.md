@@ -48,7 +48,7 @@ The dataset contains both numeric and categorical features, making it ideal for 
 
 This demonstrates strong statistical reasoning beyond basic EDA.
 
-##Machine Learning Architecture
+## Machine Learning Architecture
 #### Preprocessing Strategy (Production-Level)
 
 Implemented using ColumnTransformer + Pipeline:
