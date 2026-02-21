@@ -64,8 +64,8 @@ Implemented using ColumnTransformer + Pipeline:
 - Automated imputation within pipeline
 
  Fully reproducible
-✔ Prevents data leakage
-✔ Cross-validation safe
+- Prevents data leakage
+- Cross-validation safe
 
 ### Models Implemented
 
